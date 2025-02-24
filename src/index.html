@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmarSons - Choose Your Experience</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="landing-container">
+        <!-- World of Fabrics Section -->
+        <div class="section fabric" onclick="redirectTo('https://fabrics.amarsonsonline.com')">
+            <div class="overlay"></div>
+            <img src="public/world_of_fabrics.jpg" alt="World of Fabrics">
+            <div class="text">
+                <h1>World of Fabrics</h1>
+                <p>by AmarSons</p>
+                <span>A raw material store</span>
+            </div>
+        </div>
+
+        <!-- Exclusives Section -->
+        <div class="section exclusives" onclick="redirectTo('https://exclusives.amarsonsonline.com')">
+            <div class="overlay"></div>
+            <img src="public/exclusives.jpg" alt="Exclusives">
+            <div class="text">
+                <h1>Exclusives</h1>
+                <p>by AmarSons</p>
+                <span>A ready-made clothing store</span>
+            </div>
+        </div>
+
+        <!-- Labels Section -->
+        <div class="section labels" onclick="redirectTo('https://labels.amarsonsonline.com')">
+            <div class="overlay"></div>
+            <img src="public/labels.jpg" alt="Labels">
+            <div class="text">
+                <h1>Labels</h1>
+                <p>by AmarSons</p>
+                <span>A multi-designer hub</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fade Out Effect -->
+    <div class="fade-overlay"></div>
+
+    <!-- JavaScript for Redirection with Fade Animation -->
+    <script>
+        function redirectTo(url) {
+            document.querySelector('.fade-overlay').classList.add('active');
+            setTimeout(() => {
+                window.location.href = url;
+            }, 500);
+        }
+    </script>
+
+</body>
+</html>
