@@ -9,7 +9,8 @@
 <body>
 
     <div class="landing-container">
-        <div class="section fabric" onclick="redirectTo('https://fabrics.amarsonsonline.com')" style="background-image: url('/fabrics.jpg');">
+        <div class="section fabric" onclick="redirectTo('https://fabrics.amarsonsonline.com')">
+            <img src="/world_of_fabrics.jpg" alt="World of Fabrics">
             <div class="overlay"></div>
             <div class="text">
                 <h1>World of Fabrics</h1>
@@ -17,7 +18,8 @@
                 <span>A raw material store</span>
             </div>
         </div>
-        <div class="section exclusives" onclick="redirectTo('https://exclusives.amarsonsonline.com')" style="background-image: url('/exclusives.jpg');">
+        <div class="section exclusives" onclick="redirectTo('https://exclusives.amarsonsonline.com')">
+            <img src="/exclusives.jpg" alt="Exclusives">
             <div class="overlay"></div>
             <div class="text">
                 <h1>Exclusives</h1>
@@ -25,7 +27,8 @@
                 <span>A ready-made clothing store</span>
             </div>
         </div>
-        <div class="section labels" onclick="redirectTo('https://labels.amarsonsonline.com')" style="background-image: url('/labels.jpg');">
+        <div class="section labels" onclick="redirectTo('https://labels.amarsonsonline.com')">
+            <img src="/labels.jpg" alt="Labels">
             <div class="overlay"></div>
             <div class="text">
                 <h1>Labels</h1>
@@ -39,12 +42,10 @@
 
     <script>
         function redirectTo(url) {
-            document.querySelector('.fade-overlay').style.visibility = 'visible';
-            document.querySelector('.fade-overlay').style.opacity = '1';
-
+            document.querySelector('.fade-overlay').classList.add('active');
             setTimeout(() => {
                 window.location.href = url;
-            }, 800); // Redirect after fade animation
+            }, 500);
         }
     </script>
 
